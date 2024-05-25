@@ -1,0 +1,154 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	background-image: linear-gradient(#393939, #686868);
+}
+header, .top-bar-content-left, .top-bar-content-right {
+	display: flex;
+	align-items: center;
+	height: 3vw;
+	background-color: #333;
+	
+}
+header {
+	justify-content: space-between;
+	border-bottom: solid 0.8vh #6c6c40;
+}
+.top-bar-content-left {
+	padding-left: 1vw;
+	width: 45vw;
+	justify-content: space-between;
+}
+.top-bar-content-right {
+	padding-right: 1vw;
+	width: 30vw;
+	justify-content: space-between;
+}
+.flags {
+	height: 1.8vw;
+	width: 2.4vw;
+}
+.ico {
+	height: 1.8vw;
+	width: .;
+}
+.quote {
+	color: #FFFFFF;
+	font-family: "Playfair Display", serif;
+	font-size: 100%;
+	font-style: normal;
+}
+.title {
+	height: 2vw;
+	width: .vw;
+}
+aside {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-around;
+	width: 11vw;
+	height: 100vh;
+	float: left;
+	background: rgb(51,51,51);
+	background: linear-gradient(180deg, #979797, #8c8c8c 100%);
+}
+.side-bar-image {
+	padding-top: 1vw;
+	width: 9vw;
+	height: 9vw;
+}
+.casino-assurdo {
+	display: grid;
+	grid-template-rows: 14vw 14vw 0vw;
+	grid-template-columns: 25vw 25vw;
+	border: solid 0.8vh #6c6c40;
+	grid-gap: 0.8vh;
+	border-bottom: 0;
+	background-color: #6c6c40;
+}
+.immagine-globo {
+	width: 40vw;
+	height: 20vw;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transform: translate(10%, -120%);
+	border-radius: 50%;
+}
+.table1, .table3, .table4, .table2 {
+	width: 25vw;
+	height: 14vw;
+}
+.grid {
+	display: grid;
+	grid-template-columns: 60vw;
+	grid-template-rows: 30vw;
+	background-color: #444;
+	border: solid 0.8vh #990000;
+}
+.grid-title{
+	border: solid 0.8vh #990000;
+	width: 8vw;
+	height: 2vw;
+	padding: 2vw;
+}
+footer {
+	display: flex;
+	justify-content: center;
+	height: 6.5vh;
+	background-color: #333;
+	font-size: 110%;
+	border-top: solid 0.8vh #6c6c40;
+	color: #b6afaf;
+	font-weight: bold;
+	text-decoration: italic;
+}
+
+.footer-ima{
+	float: right;
+	width: 4.5vh;
+	height: 4.5vh;
+	display: flex;	
+	justify-content: center;
+}
+* a {
+	text-decoration: none;
+}
+.footer-image {
+	width: .vh;
+	height: 3.5vh;
+	align-items: center;
+}
+.bold-italic {
+	font-style: italic;
+	font-weight: bold;
+}
+
+pre {
+	transform: translate(-3%, -60%);
+}
+
+.colored {
+	color: #8888ff;
+}
+.centrato {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+div.none {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: left;
+	width: 85vw;
+}
+hr {
+	border: 0.4vh solid #7d7f51;
+	width: 30vw;
+}
+
+section {
+	border-left: solid 0.8vh #6c6c40;
+}
