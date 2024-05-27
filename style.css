@@ -32,6 +32,7 @@ header {
 .ico {
 	height: 1.8vw;
 	width: .;
+	padding-right: 1vw;
 }
 .quote {
 	color: #FFFFFF;
@@ -42,6 +43,7 @@ header {
 .title {
 	height: 2vw;
 	width: .vw;
+	padding-right: 1vw;
 }
 aside {
 	display: flex;
@@ -86,6 +88,8 @@ aside {
 	grid-template-rows: 30vw;
 	background-color: #444;
 	border: solid 0.8vh #990000;
+	margin-bottom: 3vh;
+	margin-top: 3vh;
 }
 .grid-title{
 	border: solid 0.8vh #990000;
@@ -105,20 +109,14 @@ footer {
 	text-decoration: italic;
 }
 
-.footer-ima{
-	float: right;
-	width: 4.5vh;
-	height: 4.5vh;
-	display: flex;	
-	justify-content: center;
-}
 * a {
 	text-decoration: none;
 }
 .footer-image {
 	width: .vh;
-	height: 3.5vh;
-	align-items: center;
+	height: 3vh;
+	
+	padding-top: 1vh;
 }
 .bold-italic {
 	font-style: italic;
@@ -143,6 +141,8 @@ div.none {
 	align-items: flex-start;
 	justify-content: left;
 	width: 85vw;
+	margin-top: -2vh;
+	margin-bottom: -2vh;
 }
 hr {
 	border: 0.4vh solid #7d7f51;
@@ -151,4 +151,10 @@ hr {
 
 section {
 	border-left: solid 0.8vh #6c6c40;
+}
+
+.testo-centrato {
+	margin-top: -1vh;
+	text-align: center;
+	align-items: center;
 }
