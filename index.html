@@ -1,282 +1,95 @@
 <!DOCTYPE html>
 <html lang="ita">
-<head>
-  <title>Official Wiki of Call To Leadership [RP]</title>
-  <!--sezione metadati-->
-  <meta charset="UTF-8" />
-  <meta author="D.F. e S.J." />
-  <meta description="Wiki di Call To Leadership [RP]" />
-  <link rel="icon" href=".\Immagini_png\Pugno_alzato.png" />
-  <link rel="license" href="https://www.gnu.org/licenses/gpl-3.0.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!--sezione css-->
-  <style>
-    .top-bar {
-      display: flex;
-      align-items: center;
-      padding: 0vh;
-      background-color: #333;
-      color: #fff;
-      position: fixed;
-      top: 0vh;
-      left: 0;
-      right: 0;
-      z-index: 1;
-      bottom: 93vh;
-      border-bottom: solid 0.8vh #6c6c40;
-    }
-
-    .testo_intestazione {
-      font-family: Arial, sans-serif;
-      font-size: 0.6vw;
-      font-weight: bold;
-      text-transform: uppercase;
-      color: #c62d2d;
-      text-shadow: 0.3vw 0.3vh #411515;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      margin-left: 1vw;
-      margin-right: 0.5vw;
-      padding: 0.5vw;
-      border-radius: 0.5vw;
-      border: 0.1vw solid #fff;
-    }
-
-    .bandiere {
-      display: flex;
-      align-items: center;
-      justify-content: right;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 2vw;
-    }
-
-    .lateral-bar {
-      display: flex;
-      align-items: flex-start;
-      justify-content: left;
-      position: fixed;
-      top: 7vh;
-      left: 0;
-      right: 90vw;
-      padding: 1vh;
-      bottom: 0;
-      color: #fff;
-      background-image: linear-gradient(#979797, #8c8c8c);
-    }
-
-    .central-page {
-      display: relative;
-      align-items: flex-start;
-      justify-content: center;
-      z-index: 0;
-      color: #fff;
-      background-image: linear-gradient(#393939, #686868);
-      position: fixed;
-      top: 7vh;
-      left: 8.9vw;
-      right: 0;
-      bottom: 0;
-      border-left: solid 0.5vw #6c6c40;
-    }
-
-    .footer-bar {
-      display: flex;
-      align-items: center;
-      padding: 0.5vh;
-      background-color: #333;
-      color: #fff;
-      position: fixed;
-      top: 92vh;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      padding-left: 9.5vw;
-      border-top: solid 0.8vh #6c6c40;
-    }
-
-    .centrata {
-      display: flex;
-      align-items: center;
-    }
-
-    .sinistra {
-      display: flex;
-      align-items: left;
-      justify-content: left;
-      padding-left: 35vw;
-    }
-
-    .mini {
-      font-family: "sans-serif";
-      font-size: 2vh;
-      font-weight: bold;
-      color: #b6afaf;
-    }
-
-    .prioritaria {
-      background-color: rgba(255, 255, 255, 0.5);
-      border-radius: 50%;
-      border: solid 0.2vw #6c6c40;
-      z-index: 2;
-      zoom: 1;
-      width: 60vw; 
-      height: 35vh; 
-      position: relative; 
-      top: 2.3vh; 
-      left: -12vw;
-    }
-
-    .secondaria {
-      display: flex;
-      position: absolute;
-      z-index: 1;
-      border: 0.5vh solid #98984d;
-      position: relative;
-      left: 20.1vw;
-      top: -4vh;
-      background-color: #b0b0a9;
-      margin-right: 50vw;
-      height:40vh;
-      width:49.4vw;
-    }
-
-    .important {
-      color: #c8ed20;
-      text-decoration: none;
-      display: inline-block;
-      margin: 0.5vw;
-      padding: 0.5vw;
-      border: 0.5vh solid #411515;
-    }
-
-    .tablei {
-      border: 0.5vh solid #811717;
-    }
-
-    .body {
-      min-height: 150vh;
-      max-width: 40vw;
-      background-color: papayawhip;
-      margin: 0 auto;
-      overflow-x: hidden; 
-      overflow-y: hidden; 
-      overflow: auto;
-    }
-  </style>
-</head>
-<body class="body">
-  <!-- start wiki_CTL[RP] header -->
-  <!--top bar-->
-  <div id="top" class="top-bar">
-    <p class="testo_intestazione">Call To Leadership</p>
-    <img src=".\Immagini_png\aquila_fascista.jpg" alt="aquila fascista" style="width: 2vw; height: 3vh; align-items: right;" />
-    <img src=".\Immagini_png\Croce_di_ferro.webp" alt="logo croce di ferro" style="width: 2vw; height: 3vh; align-items: right;" />
-
-    <p><i>"There is no way to victory; victory is the only way." - Winston Churchill</i></p>
-    <img src=".\Immagini_png\Senate.png" alt="logo democrazia parlamento" style="width: 2vw; height: 3vh; align-items: right;" />
-    <img src=".\Immagini_png\Pugno_alzato.png" alt="logo comunismo pugno alzato" style="width: 2vw; height: 3vh; align-items: left;" />
-    <!--prettier-ignore-->
-    <div class="bandiere">
-      <img src=".\Immagini_png\Flag_of_France.webp" alt="repubblica francese" style="width: 2vw; height: 3vh; align-items: right;" />
-      <pre>  </pre>
-      <img src=".\Immagini_png\Flag_of_the_United_Kingdom.webp" alt="regno unito" style="width: 2vw; height: 3vh; align-items: right;" />
-      <pre>  </pre>
-      <img src=".\Immagini_png\Flag_of_the_United_States.webp" alt="stati uniti d'americani" style="width: 2vw; height: 3vh; align-items: right;" />
-      <pre>  </pre>
-      <img src=".\Immagini_png\poland.png" alt="polonia" style="width: 2vw; height: 3vh; align-items: right;" />
-      <pre>  </pre>
-      <img src=".\Immagini_png\Flag_of_the_Soviet_Union.png" alt="unione sovietica" style="width: 2vw; height: 3vh; align-items: right;" />
-      <pre>  </pre>
-      <img src=".\Immagini_png\japan.jpg" alt="giappone" style="width: 2vw; height: 3vh; align-items: right;" />
-      <pre>  </pre>
-      <img src=".\Immagini_png\Flag_of_Italy.png" alt="italia" style="width: 2vw; height: 3vh; align-items: right;" />
-      <pre>  </pre> 
-      <img src=".\Immagini_png\Germany-flag.png" alt="germania" style="width: 2vw; height: 3vh; align-items: right;" />
-    </div>
-  </div>
-
-  <!--lateral bar-->
-  <div id="lateral-navigation-bar" class="lateral-bar">
-    <img src="Immagini_png\7103-wandtattoo-uncle-sam-einzel-695567760.jpg" alt="logo Call To Leadership" style="width: 10vw; height: 15vh;" class="centrata" />
-  </div>
-
-  <!--central page-->
-  <div id="body" class="central-page">
-    <h4 style="position: absolute; left: 1vw; top: -1vh; font-family: serif">Wiki ufficiale Call To Leadership</h4>
-    <hr style="position: absolute; left: 1vw; top: 3vh; width: 15vw; border: 0.3vh solid #57574c" />
-    <h1 style="font-family: Georgia, 'Times New Roman', Times, serif; text-align: center">Call To Leadership [RP]</h1>
-    <p style="text-align: center; position: relative; left: 1vw; top: -3vh; font-family: 'Times New Roman', Times, serif; color: #917e7e">
-      <i>
-        Benvenuto nella Wiki ufficiale di Call To Leadership, i contenuti del regolamento sono disponibili in questa pagina.<br />
-        2 gestori sono attivi per mantenere aggiornata la pagina in concomitanza con i nuovi aggiornamenti.<br />
-        Al momento sono presenti <span style="color: #ce327b">28 pagine</span>.
-      </i>
-    </p>
-
-    <div class="secondaria">
-      <img src="Immagini_storiche\table1.jpg" alt="Immagini_storiche" style="width: 60vw; height: 22vh; position: relative; top: 0; left: 0;" />
-      <img src="mondo - Copia.jpg" alt="Immagini_storiche" class="prioritaria" />
-      <img src="Immagini_storiche\table3.jpg" alt="Immagini_storiche" style="width: 37vw; height: 18.5vh; position: relative; top:21.5vh; left: -57.4vw" />
-      <img src="Immagini_storiche\table4.jpg" alt="Immagini_storiche" style="width: 15vw; height: 21vh; position: relative; top: 0vh; left: -38.6vw" />
-      <div>
-        <img src="Immagini_storiche\table2.jpg" alt="Immagini_storiche" style="width: 15vw; height: 19vh; position: relative; top: 21vh; left: -53.6vw" />
-      </div>
-    </div>
-
-    <div>
-      <table style="border: 0.4vh solid #811717; position: relative; left: 2vw; top: 0; border-spacing: 0.8vh; background-color: #272626; width:85.5vw;">
-          <tr>
-              <th class="important">Descrizione</th>
-          </tr>
-          <tr>
-              <td style="border: 0.4vh solid #811717;">
-                  <p> <h1>Call To Leaders [RP]</h1>
-
-                      Se siete alla ricerca di un'esperienza di gioco ricca e dettagliata nel mondo del roleplay a nazioni? Call To Leaders [RP] - WW2 è nato per questo, Con oltre 4 anni di esperienza nel server P&W, abbiamo deciso di lavorare per creare una season che offra una vasta gamma di possibilità e un'immersione nella Seconda Guerra Mondiale.
-                      
-                      Durante i nostri 4 anni di attività, abbiamo dedicato ben 3 mesi alla lavorazione della grande season che ora vi presentiamo. Ogni stato giocabile è stato accuratamente modellato con dettagliati moduli e spiriti nazionali, una vasta gamma di possibili game.
-                      
-                      Ciò che ci rende unici è la nostra attenzione ai dettagli e la vasta gamma di possibilità offerte ai giocatori. Potrete personalizzare il vostro esercito con una varietà di dottrine, ricerche e strategie militari, permettendovi di plasmare la storia secondo i vostri desideri.
-                      
-                      Siamo consapevoli che il panorama del roleplay italiano spesso manca di questa profondità e ricchezza di dettagli. È per questo che ci siamo impegnati a offrire una nuova possibilità a voi.
-                      
-                      Se volete scrivere un pezzo di storia **__unitevi__**!!!
-                      
-                      https://discord.gg/raa35AP3FD</p>
-              </td>
-          </tr>
-      </table>
-    </div>
-    
-  </div>
-
-  <!--footer bar-->
-  <div id="footer" class="footer-bar">
-    <pre class="mini"><i>By D.F. e S.J.</i></pre>
-    <p>&Tab;</p>
-    <pre class="mini">
-<i>|  Questa pagina è stata creata il ///   |   </i>
-</pre>
-    <a href="https://www.gnu.org/licenses/gpl-3.0.html" style="color: #8888ff; text-decoration: none">Licenza</a>
-    <pre class="mini">
- <i>  |   </i>
-</pre>
-    <a href="https://github.com/Lenaid6/Call-to-Leaders"><img src="Immagini_png\github.png" alt="logo github" style="width: 2.5vw; height: 3.5vh;" /></a>
-    <pre class="mini">
- <i>  |  Entra nel nostro Server: </i>
-</pre>
-    <a href="https://discord.gg/44YxqvYpRw"><img src="Immagini_png\Discord.webp" alt="logo discord" style="width: 2vw; height: 2vh;" /></a>
-    <pre class="mini"><i>  |    </i></pre>
-    <a href="mondo.jpg" download="Mappa" style="text-decoration: none">
-      <pre class="mini" style="color: #8888ff"><i>Scarica la mappa base</i></pre>
-    </a>
-    <pre class="mini">
-     <i>  | </i>
-</pre>
-    <img src="Immagini_png\7103-wandtattoo-uncle-sam-einzel-695567760.jpg" alt="logo Call To Leadership" style="width: 4vw; height: 4vh;" class="sinistra" />
-  </div>
-</body>
+	<head>
+		<title>Official Wiki of Call To Leadership [RP]</title>
+		<!--metadata-->
+		<meta charset="UTF-8" />
+		<meta author="D.F. e S.J." />
+		<meta description="Wiki di Call To Leadership [RP]" />
+		<link rel="icon" href=".\Immagini_png\Pugno_alzato.png" />
+		<link rel="license" href="https://www.gnu.org/licenses/gpl-3.0.html" />
+		<link rel="stylesheet" href="style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+		</style>
+	</head>
+	<body>
+		<!--top bar-->
+		<header>
+			<div class="top-bar-content-left">
+				<img src=".\Immagini_png\Title.png" alt="Call to Leaders" class="title">
+				<img src=".\Immagini_png\Aquila_Romana.png" alt="aquila fascista" class="ico"/>
+				<img src=".\Immagini_png\Croce_di_ferro.png" alt="logo croce di ferro" class="ico"/>
+				<p class="quote">"There&nbsp;is&nbsp;no&nbsp;way&nbsp;to&nbsp;victory; victory&nbsp;is&nbsp;the&nbsp;only&nbsp;way." -&nbsp;Winston&nbsp;Churchill</p>
+				<img src=".\Immagini_png\Senate.png" alt="logo democrazia parlamento" class="ico"/>
+				<img src=".\Immagini_png\Pugno_alzato.png" alt="logo comunismo pugno alzato" class="ico"/>
+			</div>
+			<div class="top-bar-content-right">
+				<img src=".\Immagini_png\Flag_of_France.webp" alt="repubblica francese" class="flags"/>
+				<img src=".\Immagini_png\Flag_of_the_United_Kingdom.webp" alt="regno unito" class="flags"/>
+				<img src=".\Immagini_png\Flag_of_the_United_States.webp" alt="stati uniti d'america" class="flags"/>
+				<img src=".\Immagini_png\poland.png" alt="polonia" class="flags"/>
+				<img src=".\Immagini_png\Flag_of_the_Soviet_Union.png" alt="unione sovietica" class="flags"/>
+				<img src=".\Immagini_png\japan.jpg" alt="giappone" class="flags"/>
+				<img src=".\Immagini_png\Flag_of_Italy.png" alt="italia" class="flags"/>
+				<img src=".\Immagini_png\Germany-flag.png" alt="germania" class="flags"/>
+			</div>
+		</header>
+		<!--lateral bar-->
+		<aside>
+			<img src="Immagini_png\7103-wandtattoo-uncle-sam-einzel-695567760.jpg" alt="logo Call To Leadership" class="side-bar-image"/>
+		</aside>
+	
+		<!--central page-->
+		<section class="centrato">
+			<h4>Wiki ufficiale Call To Leadership</h4>
+			<div class="none"><hr></div>
+			<h1>Call To Leadership [RP]</h1>
+			<p>
+				<i>
+					Benvenuto nella Wiki ufficiale di Call To Leadership, i contenuti del regolamento sono disponibili in questa pagina.<br />
+					2 gestori sono attivi per mantenere aggiornata la pagina in concomitanza con i nuovi aggiornamenti.<br />
+					Al momento sono presenti <span class="colored bold-italic">28 pagine</span>.
+				</i>
+			</p>
+			<div class="casino-assurdo">
+				<img src="Immagini_storiche\table1.jpg" alt="Immagini_storiche" class="table1"/>
+				<img src="Immagini_storiche\table3.jpg" alt="Immagini_storiche" class="table3"/>
+				<img src="Immagini_storiche\table4.jpg" alt="Immagini_storiche" class="table4"/>
+				<img src="Immagini_storiche\table2.jpg" alt="Immagini_storiche" class="table2"/>
+				<img src="mondo - Copia.jpg" alt="Immagini_storiche" class="immagine-globo"/>
+			</div>
+			<div class="grid">
+				<div class="grid-title">
+					<p>
+						Descrizione
+					</p>
+				</div>
+				<div>
+					<p>
+						<h1>Call to Leaders [RP]</h1>
+						Se siete alla ricerca di un'esperienza di gioco ricca e dettagliata nel mondo del roleplay a nazioni? Call To Leaders [RP] - WW2 è nato per questo, Con oltre 4 anni di esperienza nel server P&W, abbiamo deciso di lavorare per creare una season che offra una vasta gamma di possibilità e un'immersione nella Seconda Guerra Mondiale.
+						
+						Durante i nostri 4 anni di attività, abbiamo dedicato ben 3 mesi alla lavorazione della grande season che ora vi presentiamo. Ogni stato giocabile è stato accuratamente modellato con dettagliati moduli e spiriti nazionali, una vasta gamma di possibili game.
+						
+						Ciò che ci rende unici è la nostra attenzione ai dettagli e la vasta gamma di possibilità offerte ai giocatori. Potrete personalizzare il vostro esercito con una varietà di dottrine, ricerche e strategie militari, permettendovi di plasmare la storia secondo i vostri desideri.
+						
+						Siamo consapevoli che il panorama del roleplay italiano spesso manca di questa profondità e ricchezza di dettagli. È per questo che ci siamo impegnati a offrire una nuova possibilità a voi.
+						
+						Se volete scrivere un pezzo di storia <span class="bold-italic">unitevi</span>!!!
+						
+						https://discord.gg/raa35AP3FD
+					</p>
+				</div>
+			</div>
+		</section>
+	
+		<!--footer bar-->
+		<footer>
+			<pre><i>by D.F. e S.J. |  Questa pagina è stata creata il ///  |  <a href="https://www.gnu.org/licenses/gpl-3.0.html">Licenza</a>  |  <a href="https://github.com/Lenaid6/Call-to-Leaders"><img src="Immagini_png\github.png" alt="logo github" class="footer-image"/></a>  |  Entra nel nostro Server: <a href="https://discord.gg/44YxqvYpRw"><img src="Immagini_png\Discord.webp" alt="logo discord" class="footer-image"/></a></i>  |  <a href="mondo.jpg" download="Mappa" ><i>Scarica la mappa base</i></a>  | </pre>
+			<img src="Immagini_png\7103-wandtattoo-uncle-sam-einzel-695567760.jpg" alt="logo Call To Leadership" class="footer-ima" />
+			
+		</footer>
+	</body>
 </html>
