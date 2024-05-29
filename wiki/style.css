@@ -1,0 +1,137 @@
+.italic {
+	text-decoration: italic;
+}
+.bold {
+	font-weight: bold;
+}
+body {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	background-image: linear-gradient(#393939, #686868);
+}
+header, .top-bar-content-left, .top-bar-content-right {
+	display: flex;
+	align-items: center;
+	height: 3vw;
+	background-color: #333;
+	justify-content: space-between;
+}
+header {
+	border-bottom: solid 0.8vh #6c6c40;
+}
+.top-bar-content-left {
+	padding-left: 1vw;
+	width: 45vw;
+}
+.top-bar-content-right {
+	padding-right: 1vw;
+	width: 30vw;
+}
+.flags {
+	height: 1.8vw;
+	width: 2.4vw;
+}
+.ico {
+	height: 1.8vw;
+	width: .;
+	padding-right: 1vw;
+	padding-left: 1vw;
+}
+.quote {
+	color: #FFFFFF;
+	font-family: "Playfair Display", serif;
+	font-size: 110%;
+	font-style: normal;
+	vertical-align: center;
+}
+.title {
+	height: 2vw;
+	width: .vw;
+	padding-right: 1vw;
+}
+aside {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	flex-direction: column;
+	width: 11vw;
+	height: 62.4vw;
+	float: left;
+	background: rgb(51,51,51);
+	background: linear-gradient(180deg, #979797, #8c8c8c 100%);
+}
+.side-bar-image {
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	width: 9vw;
+	height: 9vw;
+}
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 6.5vh;
+	background-color: #333;
+	font-size: 110%;
+	border-top: solid 0.8vh #6c6c40;
+	color: #b6afaf;
+	font-weight: bold;
+	text-decoration: italic;
+}
+a {
+	text-decoration: none;
+}
+span.separator {
+	padding-left: 1vw;
+	padding-right: 1vw;
+}
+.footer-image {
+	width: .vh;
+	height: 3vh;
+}
+.USdx {
+	width: .vw;
+	height: 2.5vw;
+	float: right;
+	position: fixed;
+	bottom: 0.36vw;
+	right: 0.36vw;
+}
+.colored {
+	color: #8888ff;
+}
+.centrato {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+section {
+	border-left: solid 0.8vh #6c6c40;
+	padding: 1vw;
+}
+.contenuto {
+	width: 86vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+}
+.contenuto-sx{
+	border-left: solid 0.1vw #FFF;
+	border-top: solid 0.1vw #FFF;
+	padding-left: 1vw;
+}
+.contenuto-dx{
+	width: 10.8vw;
+	background: linear-gradient(180deg, #979797, #8c8c8c 100%);
+	border: solid 0.4vh #6c6c40;
+	word-wrap: break-word;
+}
+.immagine-dx{
+	width: 10vw;
+	height: .;
+	margin: 0.8vh;
+}
+p.didascalia {
+	word-wrap: break-word;
+}
