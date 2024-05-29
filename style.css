@@ -1,3 +1,9 @@
+.italic {
+	text-decoration: italic;
+}
+.bold {
+	font-weight: bold;
+}
 body {
 	margin: 0px;
 	padding: 0px;
@@ -9,21 +15,18 @@ header, .top-bar-content-left, .top-bar-content-right {
 	align-items: center;
 	height: 3vw;
 	background-color: #333;
-	
+	justify-content: space-between;
 }
 header {
-	justify-content: space-between;
 	border-bottom: solid 0.8vh #6c6c40;
 }
 .top-bar-content-left {
 	padding-left: 1vw;
 	width: 45vw;
-	justify-content: space-between;
 }
 .top-bar-content-right {
 	padding-right: 1vw;
 	width: 30vw;
-	justify-content: space-between;
 }
 .flags {
 	height: 1.8vw;
@@ -83,9 +86,6 @@ aside {
 .table1, .table3, .table4, .table2 {
 	width: 25vw;
 	height: 14vw;
-}
-.bold {
-	font-weight: bold;
 }
 .grid {
 	display: grid;
@@ -154,15 +154,9 @@ span.separator {
 	bottom: 0.36vw;
 	right: 0.36vw;
 }
-.bold-italic {
-	font-style: italic;
-	font-weight: bold;
-}
-
 pre {
 	transform: translate(-3%, -60%);
 }
-
 .colored {
 	color: #8888ff;
 }
@@ -188,7 +182,6 @@ hr {
 section {
 	border-left: solid 0.8vh #6c6c40;
 }
-
 .testo-centrato {
 	margin-top: -1vh;
 	text-align: center;
