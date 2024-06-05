@@ -98,8 +98,8 @@ aside {
 	margin-bottom: 3vh;
 	margin-top: 3vh;
 		grid-template-rows: repeat(6, 0.2fr);
-		grid-column-gap: 0px;
-		grid-row-gap: 0px;
+		grid-column-gap: 0;
+		grid-row-gap: 0;
 		
 }
 .grid1 {
