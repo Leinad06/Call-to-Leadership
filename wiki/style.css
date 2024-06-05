@@ -39,7 +39,7 @@ header {
 	padding-left: 1vw;
 }
 .quote {
-	color: #FFFFFF;
+	color: rgb(193, 193, 193);
 	font-family: "Playfair Display", serif;
 	font-size: 110%;
 	font-style: normal;
@@ -56,7 +56,7 @@ aside {
 	justify-content: start;
 	flex-direction: column;
 	width: 11vw;
-	height: 62.4vw;
+	height: 30.4vw;
 	float: left;
 	background: rgb(51,51,51);
 	background: linear-gradient(180deg, #979797, #8c8c8c 100%);
@@ -91,12 +91,8 @@ span.separator {
 	height: 3vh;
 }
 .USdx {
-	width: .vw;
+	width: 2.5vw;
 	height: 2.5vw;
-	float: right;
-	position: fixed;
-	bottom: 0.36vw;
-	right: 0.36vw;
 }
 .colored {
 	color: #8888ff;
@@ -111,15 +107,20 @@ section {
 	padding: 1vw;
 }
 .contenuto {
-	width: 86vw;
+	width: 50vw;
 	display: flex;
-	justify-content: space-between;
-	align-items: start;
+	
 }
 .contenuto-sx{
-	border-left: solid 0.1vw #FFF;
-	border-top: solid 0.1vw #FFF;
 	padding-left: 1vw;
+}
+.body-title{
+	text-align: left;
+	text-decoration: italic;
+	color: #d6d3d3;
+	font-family: "Playfair Display", serif;
+	font-size: 120%;
+	text-align: center;
 }
 .contenuto-dx{
 	width: 10.8vw;
@@ -134,4 +135,15 @@ section {
 }
 p.didascalia {
 	word-wrap: break-word;
+}
+* a {
+	text-decoration: none;
+	color:#8888ff;
+}
+.testo-regolamento{
+	color: blanchedalmond;
+	font-size: 100%;
+	font-family: "Piazzolla", serif;
+	font-optical-sizing: auto;
+	font-style: normal;
 }
