@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Troop Purchase</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+    .editable-input {
+      display: inline-block;
+      width: 100%;
+      border: none;
+      background-color: transparent;
+      text-align: center;
+    }
+    .disabled-cell {
+      background-color: #f0f0f0;
+    }
+  </style>
+  <script>
+    function calculateRow(input, nPrice = 1) {
+		var row = input.closest('tr');
+		// Get prices from cells
+		var priceCell1 = getPrice(row, '.price-cell-1');
+		var priceCell2 = nPrice == 2 ? getPrice(row, '.price-cell-2') : 0;  // Only get price-cell-2 if nPrice is 2
+		// Get quantities
+		var quantity1 = parseFloat(row.querySelector('.quantity-1-input').value) || 0;
+		var quantity2 = nPrice == 2 ? parseFloat(row.querySelector('.quantity-2-input').value) : 0;
+		// Calculate total
+		var total = (priceCell1 * quantity1) + (priceCell2 * quantity2);
+		// Format the total
+		var formattedTotal = formatNumber(total);
+		// Update result cell
+		var resultCell = row.querySelector('.result-cell');
+		resultCell.textContent = '€' + formattedTotal;
+	}
+	
+	function calculateAddedRow(input) {
+		var row = input.closest('tr');
+		// Get prices from cells
+		var priceCell1 = row.querySelector('.price-cell-1-input').value;
+		var priceCell2 = row.querySelector('.price-cell-2-input').value;  // Only get price-cell-2 if nPrice is 2
+		// Get quantities
+		var quantity1 = parseFloat(row.querySelector('.quantity-1-input').value) || 0;
+		var quantity2 = parseFloat(row.querySelector('.quantity-2-input').value);
+		// Calculate total
+		var total = (priceCell1 * quantity1) + (priceCell2 * quantity2);
+		// Format the total
+		var formattedTotal = formatNumber(total);
+		// Update result cell
+		var resultCell = row.querySelector('.result-cell');
+		resultCell.textContent = '€' + formattedTotal;
+	}
+
+    // Function to format number to 'k' format
+    function formatNumber(num) {
+	if (num >= 1e9) {
+		return (num / 1e9).toFixed(num % 1e9 !== 0 ? 1 : 0) + 'B';
+	} else if (num >= 1e6) {
+		return (num / 1e6).toFixed(num % 1e6 !== 0 ? 1 : 0) + 'M';
+	} else if (num >= 1000) {
+		return (num / 1000).toFixed(num % 1000 !== 0 ? 1 : 0) + 'k';
+	} else {
+		return num.toFixed(0);
+	}
+	}
+	
+
+    // Helper function to get price from input or td
+    function getPrice(row, className) {
+      var element = row.querySelector(className);
+      var priceText = element.textContent.trim().replace('€', '').replace('.', '').replace(',', '.');
+      return parseFloat(priceText) || 0;
+    }
+
+    function addRow() {
+      var table = document.getElementById('myTable');
+      var newRow = table.insertRow();
+
+      var cell1 = newRow.insertCell();
+      var cell2 = newRow.insertCell();
+      var cell3 = newRow.insertCell();
+      var cell4 = newRow.insertCell();
+      var cell5 = newRow.insertCell();
+      var cell6 = newRow.insertCell();
+
+      cell1.innerHTML = '<input type="text" class="editable-input" onchange="calculateAddedRow(this)" placeholder="Enter unit name">';
+      cell2.innerHTML = '<input type="number" value="0" class="price-cell-1-input" onchange="calculateAddedRow(this)" min="0" step="100000" value="0">';
+      cell3.innerHTML = '<input type="number" value="0" class="price-cell-2-input" onchange="calculateAddedRow(this)" min="0" step="100000" value="0">';
+      cell4.innerHTML = '<input type="number" value="0" class="quantity-1-input" oninput="calculateAddedRow(this)">';
+      cell5.innerHTML = '<input type="number" value="0" class="quantity-2-input" oninput="calculateAddedRow(this)">';
+      cell6.innerHTML = '<span class="result-cell"></span>';
+    }
+  </script>
+</head>
+<body>
+
+<table id="myTable">
+  <thead>
+    <tr>
+      <th>Unit</th>
+      <th>Price Division</th>
+      <th>Price Regiment</th>
+      <th>Quantity Division</th>
+      <th>Quantity Regiment</th>
+      <th>Total Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="unit-name editable-cell">Divisione/Reggimento di Fanteria</td>
+      <td class="price-cell-1">€800.000</td>
+      <td class="price-cell-2">€200.000</td>
+      <td><input type="number" value="0" class="quantity-1-input" oninput="calculateRow(this, 2)"></td>
+      <td><input type="number" value="0" class="quantity-2-input" oninput="calculateRow(this, 2)"></td>
+      <td><span class="result-cell"></span></td>
+    </tr>
+    <tr>
+      <td class="unit-name editable-cell">Divisione/Reggimento Corazzata</td>
+      <td class="price-cell-1">€4.000.000</td>
+      <td class="price-cell-2">€1.000.000</td>
+      <td><input type="number" value="0" class="quantity-1-input" oninput="calculateRow(this, 2)"></td>
+      <td><input type="number" value="0" class="quantity-2-input" oninput="calculateRow(this, 2)"></td>
+      <td><span class="result-cell"></span></td>
+    </tr>
+    <tr>
+      <td class="unit-name editable-cell">Divisione/Reggimento Meccanizzata</td>
+      <td class="price-cell-1">€2.000.000</td>
+      <td class="price-cell-2">€500.000</td>
+      <td><input type="number" value="0" class="quantity-1-input" oninput="calculateRow(this, 2)"></td>
+      <td><input type="number" value="0" class="quantity-2-input" oninput="calculateRow(this, 2)"></td>
+      <td><span class="result-cell"></span></td>
+    </tr>
+    <tr>
+      <td class="unit-name editable-cell">Divisione/Reggimento Motorizzata</td>
+      <td class="price-cell-1">€1.600.000</td>
+      <td class="price-cell-2">€400.000</td>
+      <td><input type="number" value="0" class="quantity-1-input" oninput="calculateRow(this, 2)"></td>
+      <td><input type="number" value="0" class="quantity-2-input" oninput="calculateRow(this, 2)"></td>
+      <td><span class="result-cell"></span></td>
+    </tr>
+    <tr>
+      <td class="unit-name editable-cell">Divisione/Reggimento di Montagna</td>
+      <td class="price-cell-1">€1.200.000</td>
+      <td class="price-cell-2">€300.000</td>
+      <td><input type="number" value="0" class="quantity-1-input" oninput="calculateRow(this, 2)"></td>
+      <td><input type="number" value="0" class="quantity-2-input" oninput="calculateRow(this, 2)"></td>
+      <td><span class="result-cell"></span></td>
+    </tr>
+    <tr>
+      <td class="unit-name editable-cell">Divisione/Reggimento Coloniale</td>
+      <td class="price-cell-1">€600.000</td>
+      <td class="price-cell-2">€150.000</td>
+      <td><input type="number" value="0" class="quantity-1-input" oninput="calculateRow(this, 2)"></td>
+      <td><input type="number" value="0" class="quantity-2-input" oninput="calculateRow(this, 2)"></td>
+      <td><span class="result-cell"></span></td>
+    </tr>
+    <tr>
+      <td class="unit-name editable-cell">Divisione/Reggimento di Cavalleria</td>
+      <td class="price-cell-1">€1.000.000</td>
+      <td class="price-cell-2">€250.000</td>
+      <td><input type="number" value="0" class="quantity-1-input" oninput="calculateRow(this, 2)"></td>
+      <td><input type="number" value="0" class="quantity-2-input" oninput="calculateRow(this, 2)"></td>
+      <td><span class="result-cell"></span></td>
+    </tr>
+    <tr>
+      <td class="unit-name editable-cell">Divisione/Reggimento di Fanteria di Marina</td>
+      <td class="price-cell-1">€1.800.000</td>
+      <td class="price-cell-2">€450.000</td>
+      <td><input type="number" value="0" class="quantity-1-input" oninput="calculateRow(this, 2)"></td>
+      <td><input type="number" value="0" class="quantity-2-input" oninput="calculateRow(this, 2)"></td>
+      <td><span class="result-cell"></span></td>
+    </tr>
+    <tr>
+      <td class="unit-name editable-cell">Reggimento di Artiglieria (Fissa)</td>
+      <td colspan="2" class="price-cell-1">€500.000</td>
+      <td><input type="number" value="0" class="quantity-1-input" oninput="calculateRow(this)"></td>
+      <td class="disabled-cell"></td>
+      <td><span class="result-cell"></span></td>
+    </tr>
+    <tr>
+      <td class="unit-name editable-cell">Reggimento di Artiglieria (Mobile)</td>
+      <td colspan="2" class="price-cell-1">€600.000</td>
+      <td><input type="number" value="0" class="quantity-1-input" oninput="calculateRow(this)"></td>
+      <td class="disabled-cell"></td>
+      <td><span class="result-cell"></span></td>
+    </tr>
+  </tbody>
+    <tr>
+      <td class="unit-name editable-cell">Reggimento di Artiglieria (Contro Carri)</td>
+      <td colspan="2" class="price-cell-1">€1.500.000</td>
+      <td><input type="number" value="0" class="quantity-1-input" oninput="calculateRow(this)"></td>
+      <td class="disabled-cell"></td>
+      <td><span class="result-cell"></span></td>
+    </tr>
+    <tr>
+      <td class="unit-name editable-cell">Reggimento di Genio Pionieri</td>
+      <td colspan="2" class="price-cell-1">€2.000.000</td>
+      <td><input type="number" value="0" class="quantity-1-input" oninput="calculateRow(this)"></td>
+      <td class="disabled-cell"></td>
+      <td><span class="result-cell"></span></td>
+    </tr>
+    <tr>
+      <td class="unit-name editable-cell">Reggimento di Cavalleria (Corazzato)</td>
+      <td colspan="2" class="price-cell-1">€3.000.000</td>
+      <td><input type="number" value="0" class="quantity-1-input" oninput="calculateRow(this)"></td>
+      <td class="disabled-cell"></td>
+      <td><span class="result-cell"></span></td>
+    </tr>
+    <tr>
+      <td class="unit-name editable-cell">Reggimento di Cavalleria (Guidato)</td>
+      <td colspan="2" class="price-cell-1">€3.000.000</td>
+      <td><input type="number" value="0" class="quantity-1-input" oninput="calculateRow(this)"></td>
+      <td class="disabled-cell"></td>
+      <td><span class="result-cell"></span></td>
+    </tr>
+  </tbody>
+</table>
+
+<button onclick="addRow()">Add Row</button>
+
+
+<body>
+  <h1>Calcolatore Reclutamento Truppe</h1>
+  <p>Inserisci i dati della tua nazione per calcolare il numero massimo di divisioni reclutabili e il tempo di recupero.</p>
+
+  Popolazione:
+  <input type="number" id="totalPopulation" required> (milioni)<br>
+
+  Percentuale Reclutabile (1-5):
+  <input type="number" id="recruitablePercentage" min="1" max="5" required><br>
+
+  Fattore Mobilitazione (0.1-1):
+  <input type="number" id="mobilizationFactor" min="0.1" max="1" step="0.1" required><br>
+
+  Spirito Nazionale (Bonus/Malus):
+  <input type="number" id="nationalSpirit" required><br>
+
+  Danni di Guerra (0-1):
+  <input type="number" id="warInjuries" min="0" max="1" step="0.1" required><br>
+
+  <br>
+
+  Fattore Reclutamento (0.1-0.5):
+  <input type="number" id="recruitmentFactor" min="0.1" max="0.5" step="0.1" required><br>
+
+  Fattore Produzione (0.1-1):
+  <input type="number" id="productionFactor" min="0.1" max="1" step="0.1" required><br>
+
+  <button onclick="calcolaDivisioniMassime()">Calcola Divisioni Reclutabili Massimo</button>
+  <button onclick="calcolaTempoRecupero()">Calcola Tempo Recupero</button>
+
+  <br>
+  <div id="maxDivisionsResult"></div>
+  <div id="recoveryTimeResult"></div>
+
+  <script>
+    function calcolaDivisioniMassime() {
+	var popolazioneTotale = parseFloat(document.getElementById("totalPopulation").value);
+	var percentualeReclutabile = parseFloat(document.getElementById("recruitablePercentage").value);
+	var fattoreMobilitazione = parseFloat(document.getElementById("mobilizationFactor").value);
+	var spiritoNazionale = parseFloat(document.getElementById("nationalSpirit").value);
+	var danniGuerra = parseFloat(document.getElementById("warInjuries").value);
+	
+	if (isNaN(popolazioneTotale) || isNaN(percentualeReclutabile) || 
+		isNaN(fattoreMobilitazione) || isNaN(spiritoNazionale) || 
+		isNaN(danniGuerra)) {
+		alert("Si prega di inserire valori numerici validi per tutti i campi.");
+		return;
+	}
+	
+	var divisioniMassime = ((popolazioneTotale * (percentualeReclutabile * fattoreMobilitazione * spiritoNazionale)) / 100000) / danniGuerra;
+	
+	document.getElementById("maxDivisionsResult").innerHTML = "Numero massimo di divisioni reclutabili: " + divisioniMassime.toFixed(2);
+	}
+	
+	function calcolaTempoRecupero() {
+	var divisioniMassime = parseFloat(document.getElementById("maxDivisionsResult").textContent.split(": ")[1]); // Extract value from previous calculation result
+	var fattoreReclutamento = parseFloat(document.getElementById("recruitmentFactor").value);
+	var fattoreProduzione = parseFloat(document.getElementById("productionFactor").value);
+	
+	if(isNaN(divisioniMassime)){
+		alert("Si prega di calcolare prima il numero di divisioni reclutabili in quanto questo dato e' necessario per il calcolo del tempo di recupero.")
+	}
+	
+	if (isNaN(fattoreReclutamento) || isNaN(fattoreProduzione)) {
+		alert("Si prega di inserire valori numerici validi per tutti i campi.");
+		return;
+	}
+	
+	var tempoRecupero = divisioniMassime / (6 / fattoreReclutamento / fattoreProduzione);
+	
+	document.getElementById("recoveryTimeResult").innerHTML = "Tempo di recupero (mesi): " + tempoRecupero.toFixed(2);
+	}
+  </script>
+
+</body>
+</html>
