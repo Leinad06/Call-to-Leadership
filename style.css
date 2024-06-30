@@ -178,47 +178,6 @@ aside {
 			height: 1.8vw;
 			margin-top: -0.5vw;
 		}
-.grid-title{
-	font-size: 150%;
-	color:#6D5540;
-	font-weight: bold;
-	border: solid 0.7vh #6c6c40;
-	width: 9.5vw;
-	height: 2vw;
-	margin: 1vw;
-	padding: 1vw;
-	box-sizing: border-box;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	
-}
-
-.grid-item1 {
-	font-size: 120%;
-	color: rgb(193, 193, 193);
-	font-weight: bold;
-	border: solid 0.7vh #6c6c40;
-	width: 58vw;
-	height: .vw;
-	margin: 1vw;
-	margin-top: 0;
-	padding: 2vw;
-	box-sizing: border-box;
-}
-
-.grid-item2 {
-	font-size: 120%;
-	color: rgb(193, 193, 193);
-	font-weight: bold;
-	border: solid 0.7vh #6c6c40;
-	width: 58vw;
-	height: .vw;
-	margin: 1vw;
-	margin-top: 0;
-	padding: 2vw;
-	box-sizing: border-box;
-}
 /*end*/
 footer {
 	display: flex;

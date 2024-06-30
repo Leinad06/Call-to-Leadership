@@ -4,6 +4,11 @@
 .bold {
 	font-weight: bold;
 }
+.chat{
+	background-color: rgba(119, 180, 177, 0.573) ;
+	border-radius: 10px;
+
+}
 body {
 	margin: 0px;
 	padding: 0px;
@@ -44,6 +49,12 @@ header {
 	font-size: 110%;
 	font-style: normal;
 	vertical-align: center;
+}
+.manuale {
+	height: 2vw;
+	width: .vw;
+	padding-top: 1vw;
+	padd
 }
 .title {
 	height: 2vw;
@@ -138,12 +149,35 @@ p.didascalia {
 }
 * a {
 	text-decoration: none;
-	color:#8888ff;
+	color:#e41c1c;
+}
+.title{
+	text-decoration: italic;
+	color: blanchedalmond;
+	font-family: "Piazzolla", serif;
+	font-size: 150%;
+	font-optical-sizing: auto;
+}
+.title-minore{
+	text-decoration: italic;
+	color: blanchedalmond;
+	font-family: "Piazzolla", serif;
+	font-size: 120%;
+	font-optical-sizing: auto;
 }
 .testo-regolamento{
 	color: blanchedalmond;
-	font-size: 100%;
+	font-size: 110%;
 	font-family: "Piazzolla", serif;
 	font-optical-sizing: auto;
 	font-style: normal;
 }
+
+.economia-div{
+	background-color: #333;
+	padding: 15px;
+	margin-left: 5vh;
+	border: solid 0.9vh #6c6c40;
+	width: 80vh;
+	height: .;
+	}
